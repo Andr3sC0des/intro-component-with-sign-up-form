@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "poppins";
+  background: url("../images/bg-intro-desktop.png"), hsl(0deg, 100%, 74%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.details {
+  max-width: 500px;
+}
+.details__title {
+  font-size: 3rem;
+  color: #fff;
+}
+.details__paragraph {
+  margin-top: 2rem;
+  color: #fff;
+  line-height: 1.5rem;
+}
+
+.subscribe {
+  height: 50px;
+  max-width: 500px;
+  background: hsl(248deg, 32%, 49%);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.subscribe__info span {
+  font-weight: bold;
+}
+
+.card {
+  margin-top: 1rem;
+  box-shadow: 2px 2px 5px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1rem;
+  max-width: 500px;
+  padding: 1rem;
+  background: #fff;
+}
+.card__form {
+  width: 90%;
+}
+.card__input {
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  height: 50px;
+  width: 100%;
+  padding-left: 1.5rem;
+  border: 1px solid #999;
+  display: block;
+}
+.card__input::placeholder {
+  font-weight: bold;
+}
+.card__input--error {
+  border: 2px solid hsl(0deg, 100%, 74%);
+}
+.card__button {
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: hsl(154deg, 59%, 51%);
+  border: none;
+  color: #fff;
+  display: block;
+  font-weight: 700;
+  cursor: pointer;
+}
+.card__terms {
+  margin-top: 1rem;
+  display: block;
+  font-size: 0.7rem;
+  color: hsl(246deg, 25%, 77%);
+}
+.card__terms a {
+  color: hsl(0deg, 100%, 74%);
+  font-weight: bold;
+  text-decoration: none;
+}
+.card__iconerror {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  opacity: 0;
+}
+.card__iconerror__error {
+  opacity: 1;
+}
+.card__labelerror {
+  position: absolute;
+  color: hsl(0deg, 100%, 74%);
+  font-size: 0.7rem;
+  font-weight: 600;
+  right: 0;
+  opacity: 0;
+}
+
+.error {
+  opacity: 1;
+}
+
+.inputcon {
+  position: relative;
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    background: url("../images/bg-intro-mobile.png"), hsl(0deg, 100%, 74%);
+  }
+  html {
+    font-size: 12px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .cardcon {
+    margin: 1rem 1.5rem;
+  }
+  .details {
+    margin: 1rem;
+  }
+  .details__title {
+    text-align: center;
+  }
+  .details__paragraph {
+    text-align: center;
+  }
+}
+.flag {
+  position: absolute;
+  top: 0;
+  margin-top: 5px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #2e2e2e;
+  width: 120px;
+  height: 50px;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+.flag:hover {
+  width: 400px;
+  color: transparent;
+}
+.flag:hover .attribution {
+  width: 400px;
+  opacity: 1;
+}
+
+.attribution {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 0;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+.attribution a {
+  color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+  .flag {
+    right: 0;
+    border-top-left-radius: 1rem;
+  }
+  .flag:hover {
+    width: 310px;
+  }
+  .flag:hover .attribution {
+    width: 310px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

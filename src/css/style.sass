@@ -1,0 +1,206 @@
+
+//# primary
+
+$red: hsl(0, 100%, 74%)
+$green: hsl(154, 59%, 51%)
+
+//# accent
+
+$blue: hsl(248, 32%, 49%)
+
+//# neutral
+
+$dark-blue: hsl(249, 10%, 26%) 
+$grayish-blue: hsl(246, 25%, 77%)
+
+// typography
+
+//# body copy
+
+$font-size: 16px
+
+//# font
+
+$family: "poppins" //400, 500, 600, 700
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-size: $font-size
+
+body
+    font-family: $family
+    background: url("../images/bg-intro-desktop.png"), $red
+
+.container
+    display: flex
+    justify-content: space-around
+    align-items: center
+    min-height: 100vh
+
+.details
+    max-width: 500px
+    &__title
+        font-size: 3rem
+        color: #fff
+    &__paragraph
+        margin-top: 2rem
+        color: #fff
+        line-height: 1.5rem
+
+.subscribe
+    height: 50px
+    max-width: 500px
+    background: $blue
+    border-radius: 1rem
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #fff
+    &__info
+        span
+            font-weight: bold
+
+.card
+    margin-top: 1rem
+    box-shadow: 2px 2px 5px #000
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    border-radius: 1rem
+    max-width: 500px
+    padding: 1rem
+    background: #fff
+    &__form
+        width: 90%
+    &__input
+        margin: auto
+        margin-top: 2rem
+        border-radius: 0.5rem
+        height: 50px
+        width: 100%
+        padding-left: 1.5rem
+        border: 1px solid #999
+        display: block
+        &::placeholder
+            font-weight: bold
+        &--error
+            border: 2px solid $red
+    &__button
+        margin: auto
+        margin-top: 2rem
+        padding: 1rem
+        width: 100%
+        border-radius: 1rem
+        background: $green
+        border: none
+        color: #fff
+        display: block
+        font-weight: 700
+        cursor: pointer
+    &__terms
+        margin-top: 1rem
+        display: block
+        font-size: 0.7rem
+        color: $grayish-blue
+        a
+            color: $red
+            font-weight: bold
+            text-decoration: none
+    &__iconerror
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 10px
+        opacity: 0
+        &__error
+            opacity: 1
+    &__labelerror
+        position: absolute
+        color: $red
+        font-size: 0.7rem
+        font-weight: 600
+        right: 0
+        opacity: 0
+.error
+    opacity: 1
+
+
+.inputcon
+    position: relative
+
+
+@media screen and (max-width: 950px)
+    body
+        background: url("../images/bg-intro-mobile.png"), $red
+    html
+        font-size: 12px
+    .container
+        display: flex
+        flex-direction: column
+    .cardcon
+        margin: 1rem 1.5rem
+    .details
+        margin: 1rem
+        &__title
+            text-align: center
+        &__paragraph
+            text-align: center
+
+.flag
+    position: absolute
+    top: 0
+    margin-top: 5px
+    border-top-right-radius: 1rem
+    border-bottom-right-radius: 1rem
+    background: #2e2e2e
+    width: 120px
+    height: 50px
+    transition: all 1s
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #fff
+    font-family: sans-serif
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 16px
+    &:hover
+        width: 400px
+        color: transparent
+        .attribution
+            width: 400px
+            opacity: 1
+
+.attribution
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition: all 1s
+    width: 0
+    font-size: 16px
+    text-align: center
+    opacity: 0
+    white-space: nowrap
+    overflow: hidden
+    font-family: sans-serif
+    color: #fff
+    text-decoration: none
+    a
+        color: #fff
+
+@media screen and (max-width: 960px)
+    .flag
+        right: 0
+        border-top-left-radius: 1rem
+        &:hover
+            width: 310px
+            & .attribution
+                width: 310px
+
+        
